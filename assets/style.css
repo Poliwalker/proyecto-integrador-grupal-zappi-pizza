@@ -1,0 +1,15 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #010101;
+	color: #f3f3f3;
+}
+
+.section1 h1 {
+	display: flex;
+	justify-content: center;
+}
