@@ -23,12 +23,13 @@ body {
 	color: var(--white);
 	background: rgba(19, 20, 21, 1);
 	font-family: var(--font1);
+	width: 100%;
 }
-
 /* navbar */
 .header-container {
-	max-width: 1529px;
+	position: relative;
 	width: 100%;
+	max-width: 1400px;
 	margin: 0 auto;
 }
 
@@ -37,9 +38,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	max-width: 1529px;
-	margin: 0 auto;
-	padding: 50px 30px;
+	padding: 50px 10px;
 }
 
 .navbar-list {
@@ -62,7 +61,7 @@ body {
 }
 
 .navbar-list img {
-	margin-right: 80px;
+	margin-right: 10px;
 }
 
 .fa-solid {
@@ -71,20 +70,28 @@ body {
 	opacity: 50%;
 	cursor: pointer;
 }
-
 .logo-img {
 	width: 76px;
 	height: 79px;
+}
+
+.number-products {
+	position: absolute;
+	top: 65px;
+	right: 40px;
+	z-index: 10;
+	background-color: red;
+	padding: 5px 12px;
+	font-size: 14px;
+	border-radius: 50%;
 }
 
 /* hero */
 
 .main-container {
 	max-width: 1350px;
-	width: 100%;
 	margin: 0 auto;
-	display: flex;
-	flex-direction: row;
+	width: 100%;
 }
 
 .hero {
@@ -121,14 +128,13 @@ body {
 }
 
 .hero-img {
-	margin: 100px;
 	position: relative;
 }
 
 .pizza1 {
 	position: absolute;
 	top: -100px;
-	right: 50px;
+	right: 150px;
 	width: 265px;
 	height: 265px;
 }
@@ -136,12 +142,12 @@ body {
 .pizza2 {
 	position: absolute;
 	top: -200px;
-	right: -200px;
+	right: -100px;
 	width: 392px;
 	height: 392px;
 }
 
-button {
+.hero-button {
 	cursor: pointer;
 	color: var(--white);
 	font-family: 'Montserrat';
@@ -154,7 +160,7 @@ button {
 	background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1136px) {
 	.hero-img {
 		display: none;
 	}
@@ -193,12 +199,11 @@ button {
 }
 
 .card-container {
-	margin-left: 40px;
-	margin-right: 40px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
+	gap: 50px;
 }
 
 .card-recomendaciones {
@@ -208,8 +213,7 @@ button {
 	align-items: center;
 	padding: 20px;
 	background-color: var(--black);
-	margin-left: 50px;
-	margin-bottom: 50px;
+	margin-left: 0px;
 	width: 347px;
 	height: 103px;
 	background: #252525;
@@ -262,11 +266,9 @@ button {
 	}
 
 	.card-container {
-		margin-left: 0;
-	}
-
-	.card-recomendaciones {
-		margin: 20px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.section-tittle {
@@ -275,6 +277,13 @@ button {
 
 	.section-tittle p {
 		text-align: center;
+	}
+}
+
+@media (max-width: 348px) {
+	.card-recomendaciones {
+		width: 100%;
+		justify-content: center;
 	}
 }
 
@@ -297,9 +306,7 @@ button {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 30px;
-	margin-left: 40px;
-	margin-right: 40px;
-	padding: 50px 0;
+	padding: 50px 40px;
 }
 
 .card-s3 {
@@ -376,10 +383,15 @@ button {
 
 /* seccion 4 las mas populares */
 
+.section4 {
+	width: 100%;
+}
+
 .section4-title {
 	width: 100%;
 	display: flex;
 	margin-left: 80px;
+	padding-bottom: 40px;
 }
 
 .section4-title h3 {
@@ -394,9 +406,6 @@ button {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 30px;
-	margin-left: 40px;
-	margin-right: 40px;
-	padding: 50px 0;
 }
 
 .card-popular {
@@ -441,6 +450,12 @@ button {
 .add {
 	width: 85px;
 	height: 29px;
+	cursor: pointer;
+	color: var(--white);
+	font-family: 'Montserrat';
+	border-radius: 15px;
+	font-size: 14px;
+	background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
 }
 
 @media (max-width: 1016px) {
@@ -452,8 +467,17 @@ button {
 
 @media (max-width: 1286px) {
 	.card-popular-container {
-		margin-left: 40px;
-		margin-right: 40px;
+		margin-left: 0px;
+		margin-right: 0px;
+		align-items: center;
+	}
+}
+
+@media (max-width: 588px) {
+	.card-popular-container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 }
 
