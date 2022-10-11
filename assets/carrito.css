@@ -1,0 +1,158 @@
+.mis-compras {
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 300px;
+	z-index: 15;
+	display: flex;
+	flex-direction: column;
+	background: #252525;
+	padding: 10px 10px 20px 10px;
+	border-radius: 15px;
+	/* display: none; */
+}
+
+.header-cart button {
+	background: linear-gradient(
+		98.81deg,
+		#ffa100 -0.82%,
+		#ffa100 -0.81%,
+		#ff005c 101.53%
+	);
+	color: #ffffff;
+	padding: 6px 8px;
+	border-radius: 4px;
+	font-size: 9px;
+	cursor: pointer;
+}
+
+.header-cart h4 {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	color: #ffffff;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.cart-products {
+	padding: 0 20px;
+}
+
+.add-rest {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.add-food-cart {
+	width: 26px;
+	height: 26px;
+	border-radius: 8px;
+	opacity: 0.5;
+	background: linear-gradient(
+		98.81deg,
+		#ffa100 -0.82%,
+		#ffa100 -0.81%,
+		#ff005c 101.53%
+	);
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.number-order {
+	font-size: 16px;
+	opacity: 0.7;
+	font-family: 'Poppins';
+	font-style: normal;
+}
+
+.rest-food-cart {
+	background: linear-gradient(
+		98.81deg,
+		#ffa100 -0.82%,
+		#ffa100 -0.81%,
+		#ff005c 101.53%
+	);
+	width: 26px;
+	height: 26px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.finish-buy {
+	padding: 50px 0 10px 0;
+}
+
+.subtotal {
+	display: flex;
+	justify-content: space-between;
+}
+
+.subtotal h5,
+.subtotal span,
+.send h5,
+.send span {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.send {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0 10px 0;
+	border-bottom: 1px solid white;
+}
+
+.total-products {
+	padding: 20px 0 30px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.buy {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.buy-button {
+	width: 254px;
+	height: 50px;
+	background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
+	box-shadow: 11px 28px 50px rgba(20, 78, 90, 0.2);
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.buy a {
+	color: #ffffff;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	opacity: 0.3;
+	padding-top: 10px;
+}
+
+@media (max-width: 416px) {
+	.mis-compras {
+		width: 100%;
+		border-radius: 0;
+	}
+
+	.cart-products {
+		width: 100%;
+		height: 100%;
+		padding: 20px 0;
+	}
+
+	.card-recomendaciones {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+}
