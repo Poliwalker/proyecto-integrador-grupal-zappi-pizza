@@ -1,15 +1,31 @@
 .mis-compras {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	min-width: 300px;
+	height: 100vh;
 	z-index: 15;
 	display: flex;
 	flex-direction: column;
 	background: #252525;
-	padding: 10px 10px 20px 10px;
+	padding: 10px 0px 10px 0px;
 	border-radius: 15px;
-	/* display: none; */
+	overflow: auto;
+	filter: none;
+	display: none;
+}
+
+.mis-compras::-webkit-scrollbar {
+	width: 8px;
+}
+
+.mis-compras::-webkit-scrollbar-thumb {
+	background: #ffffffa2;
+	border-radius: 10px;
+}
+
+.header-cart {
+	padding-left: 10px;
 }
 
 .header-cart button {
@@ -150,9 +166,10 @@
 		padding: 20px 0;
 	}
 
-	.card-recomendaciones {
+	.card-recomendaciones-cart {
 		display: flex;
 		justify-content: center;
+		gap: 10px;
 		width: 100%;
 	}
 }

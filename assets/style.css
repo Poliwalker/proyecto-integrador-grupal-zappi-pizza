@@ -25,12 +25,22 @@ body {
 	font-family: var(--font1);
 	width: 100%;
 }
+
+body::-webkit-scrollbar {
+	width: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #ff9300;
+	border-radius: 10px;
+}
 /* navbar */
 .header-container {
 	position: relative;
 	width: 100%;
 	max-width: 1400px;
 	margin: 0 auto;
+	z-index: 1;
 }
 
 .header-container nav {
@@ -46,6 +56,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 30px;
+	/* filter: grayscale(6%) blur(4px);
+	-webkit-filter: grayscale(6%) blur(4px);
+	-moz-filter: grayscale(6%) blur(4px); */
 }
 
 .home {
@@ -73,6 +86,10 @@ body {
 .logo-img {
 	width: 76px;
 	height: 79px;
+	cursor: pointer;
+	/* filter: grayscale(6%) blur(4px);
+	-webkit-filter: grayscale(6%) blur(4px);
+	-moz-filter: grayscale(6%) blur(4px); */
 }
 
 .number-products {
@@ -92,6 +109,9 @@ body {
 	max-width: 1350px;
 	margin: 0 auto;
 	width: 100%;
+	/* filter: grayscale(6%) blur(4px);
+	-webkit-filter: grayscale(6%) blur(4px);
+	-moz-filter: grayscale(6%) blur(4px); */
 }
 
 .hero {
@@ -160,6 +180,10 @@ body {
 	background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
 }
 
+.hero-button a {
+	color: #ffffff;
+}
+
 @media (max-width: 1136px) {
 	.hero-img {
 		display: none;
@@ -225,6 +249,13 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+}
+
+.description p {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
 }
 .p2 {
 	font-weight: 400;
@@ -482,6 +513,9 @@ body {
 	align-items: center;
 	width: 100%;
 	padding: 30px 0;
+	/* filter: grayscale(6%) blur(4px);
+	-webkit-filter: grayscale(6%) blur(4px);
+	-moz-filter: grayscale(6%) blur(4px); */
 }
 
 .footer-links {
