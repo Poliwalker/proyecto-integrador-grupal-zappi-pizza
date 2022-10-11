@@ -24,6 +24,7 @@ body {
 	background: rgba(19, 20, 21, 1);
 	font-family: var(--font1);
 	width: 100%;
+	overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
