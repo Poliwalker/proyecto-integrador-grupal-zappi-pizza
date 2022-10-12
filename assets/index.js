@@ -21,14 +21,14 @@ const cardPopular = document.querySelector('.card-popular');
 const btnAdd = document.querySelector('.add');
 
 
-// const renderHTML = (food) => {
-// 	caja.innert.html = food.filter((food) => foods.id).join('');
-// };
 
-// const printHTML = (menu) => {
-// 	const { name, id, title, ingredients } = menu;
-// 	return `<div></div>`;
-// };
+tacos.addEventListener('click', () => {
+	alert("No hay tacos");
+  });
+
+  wraps.addEventListener('click', () => {
+	alert("Nos quedamos sin wraps");
+  });
 
 
 const init = () => {
