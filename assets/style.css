@@ -447,7 +447,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .active {
-  background: red;
+  border: 1px solid red;
 }
 
 .card-popular h4 {

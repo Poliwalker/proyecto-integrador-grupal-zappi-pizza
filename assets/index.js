@@ -11,14 +11,6 @@ const total = document.querySelector('.tot');
 //llamamos los elementos de categorias
 const categoriesList = document.querySelectorAll('.category');
 const categories = document.querySelector('.card-category-container')
-const pizzas = document.querySelector('.cat-pizza');
-const hambuguesas = document.querySelector('.cat-burguer');
-const napapuki = document.querySelector('.cat-papas');
-const individuales = document.querySelector('.cat-individual');
-const wraps = document.querySelector('.cat-burrito');
-const tacos = document.querySelector('.cat-taco');
-const batidos = document.querySelector('.batido');
-
 const products = document.querySelector('.card-popular-container');
 const btnAdd = document.querySelector('.add');
 
