@@ -1,76 +1,76 @@
-let foods = [
-	//Pizzas
+const foods = [
 	{
 		id: 1,
 		nombre: 'La Mr Pit',
-		category: 'pizzas',
+		category: 'pizza',
 		leyenda: 'Solo para expertos',
 		popular: true,
 		precio: 350,
-		img: '/assets/populares/Photo Menu.png',
+		img: '/assets/populares/PhotoMenu.png',
+		
 	},
 	{
 		id: 2,
 		nombre: 'Q"Jamone!',
-		category: 'pizzas',
+		category: 'pizza',
 		leyenda: 'c/jamon crudo',
 		popular: false,
 		precio: 350,
-		img: '/assets/populares/Photo Menu-1.png',
+		img: '/assets/populares/PhotoMenu-1.png',
 	},
 	{
 		id: 3,
 		nombre: 'La Charly Garcia',
-		category: 'pizzas',
+		category: 'pizza',
 		leyenda: 'BASTA!',
 		popular: true,
 		precio: 380,
-		img: '/assets/populares/Photo Menu-2.png',
+		img: '/assets/populares/PhotoMenu-2.png',
 	},
 	{
 		id: 4,
 		nombre: 'La Maradona',
-		category: 'pizzas',
+		category: 'pizza',
 		leyenda: 'Eterna',
 		popular: true,
 		precio: 450,
-		img: '/assets/populares/Photo Menu-3.png',
+		img: '/assets/populares/PhotoMenu-3.png',
 	},
 	{
 		id: 5,
 		nombre: 'Picantovich',
-		category: 'pizzas',
+		category: 'pizza',
 		leyenda: 'Pica 2 veces',
 		popular: false,
 		precio: 750,
-		img: '/assets/populares/Photo Menu-4.png',
+		img: '/assets/populares/PhotoMenu-4.png',
 	},
 	{
 		id: 6,
 		nombre: 'La Hasbulla',
-		category: 'pizzas',
+		category: 'pizza',
 		leyenda: 'En honor al 1',
 		popular: false,
 		precio: 350,
-		img: '/assets/populares/Photo Menu.png',
+		img: '/assets/fotos-que-faltan/PhotoMenuHabulla.png',
 	},
 	{
 		id: 7,
 		nombre: 'Leo Messi',
-		category: 'pizzas',
+		category: 'pizza',
 		leyenda: 'De pie señores',
 		popular: true,
 		precio: 10,
-		img: '/assets/fotos-que-faltan/Photo Menuleomessi.png',
+		img: '/assets/fotos-que-faltan/PhotoMenuleomessi.png',
 	},
 	{
 		id: 8,
 		nombre: 'Nick Gi',
-		category: 'pizzas',
+		category: 'pizza',
 		leyenda: 'La que desaparece',
 		popular: false,
 		precio: 'gratarola',
-		img: '/assets/fotos-que-faltan/Photo Menunickgi.png',
+		img: '/assets/fotos-que-faltan/PhotoMenunickgi.png',
 	},
 	{
 		id: 9,
@@ -214,3 +214,18 @@ let foods = [
 		img: 'https://i.ytimg.com/vi/08yYxeY8UdE/maxresdefault.jpg',
 	},
 ];
+
+ const splitProducts = size => {
+ 	let dividedProducts = [];
+ 	for (let i = 0; i < foods.length; i += size) {
+ 	  dividedProducts.push(foods.slice(i, i + size));
+ 	}
+ 	return dividedProducts;
+   };
+  
+ //Funcion para dividir los productos en arrays de 6 y manejar la paginacion
+   const productsController = {
+ 	dividedProducts: splitProducts(8),
+ 	nextProductsIndex: 1,
+ 	productsLimit: splitProducts(8).length,
+   };
