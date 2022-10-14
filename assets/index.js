@@ -27,6 +27,8 @@ const products = document.querySelector('.card-popular-container');
 // botón para agregar pedido al carrito
 const btnAdd = document.querySelector('.add');
 
+const overlay = document.querySelector('.overlay');
+
 //funcion para crear y retornar el html
 const createHtml = (product) => {
 	const { nombre, leyenda, precio, img } = product;
@@ -95,13 +97,14 @@ const closeCart = () => {
 
 const openCart = () => {
 	cartContainer.classList.remove('hidden');
+	overlay.classList.add('show-overlay');
 };
 
 const init = () => {
 	renderProducts();
 	categories.addEventListener('click', applyFilter);
-	cerrarCart.addEventListener('click', closeCart);
 	cartBtn.addEventListener('click', openCart);
+	cerrarCart.addEventListener('click', closeCart);
 };
 
 init();
