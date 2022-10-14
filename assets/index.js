@@ -97,7 +97,6 @@ const closeCart = () => {
 
 const openCart = () => {
 	cartContainer.classList.remove('hidden');
-	overlay.classList.add('show-overlay');
 };
 
 const init = () => {
