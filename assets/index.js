@@ -26,6 +26,7 @@ const categories = document.querySelector('.card-category-container');
 const products = document.querySelector('.card-popular-container');
 // botón para agregar pedido al carrito
 const btnAdd = document.querySelector('.add');
+const titleContainer = document.querySelector('.section4-title');
 
 const overlay = document.querySelector('.overlay');
 
@@ -43,23 +44,17 @@ const createHtml = (product) => {
 	</div>`;
 };
 
-const renderDivideProducts = (index = 0) => {
-	products.innerHTML += productsController.dividedProducts[index]
-		.map(createHtml)
-		.join('');
-};
-
-const renderProducts = (index = 0, category = undefined) => {
-	if (!category) {
-		renderDivideProducts(index);
+const renderProducts = (category = undefined, productList) => {
+	if (category === undefined) {
+		titleContainer.innerHTML = `No hay stock `;
 		return;
+	} else {
+		products.innerHTML = productList.map(createHtml).join('');
 	}
-	renderfilteredProducts(category);
 };
 
 const renderfilteredProducts = (category) => {
 	const productList = foods.filter((product) => product.category === category);
-
 	products.innerHTML = productList.map(createHtml).join('');
 };
 
@@ -77,7 +72,6 @@ const changeBtnActiveState = (selectedCategory) => {
 const changeFilterState = (e) => {
 	const selectedCategory = e.target.dataset.category;
 	changeBtnActiveState(selectedCategory);
-	//changeShowMoreBtnState(selectedCategory);
 };
 
 const applyFilter = (e) => {
@@ -93,10 +87,19 @@ const applyFilter = (e) => {
 
 const closeCart = () => {
 	cartContainer.classList.add('hidden');
+	overlay.classList.remove('show-overlay');
 };
 
 const openCart = () => {
 	cartContainer.classList.remove('hidden');
+	overlay.classList.add('show-overlay');
+};
+
+const closeOnScroll = () => {
+	if (cartContainer.classList.contains('hidden')) return;
+
+	cartContainer.classList.add('hidden');
+	overlay.classList.remove('show-overlay');
 };
 
 const init = () => {
@@ -104,6 +107,7 @@ const init = () => {
 	categories.addEventListener('click', applyFilter);
 	cartBtn.addEventListener('click', openCart);
 	cerrarCart.addEventListener('click', closeCart);
+	window.addEventListener('scroll', closeOnScroll);
 };
 
 init();

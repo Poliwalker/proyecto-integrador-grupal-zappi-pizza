@@ -175,3 +175,20 @@
 .hidden {
 	display: none;
 }
+
+.overlay {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	height: 105vh;
+	width: 100%;
+	z-index: 1;
+	background: rgba(255, 255, 255, 0.03);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(10px);
+	display: none;
+}
+
+.show-overlay {
+	display: block;
+}

@@ -7,7 +7,6 @@ const foods = [
 		popular: true,
 		precio: 350,
 		img: '/assets/populares/PhotoMenu.png',
-		
 	},
 	{
 		id: 2,
@@ -214,18 +213,3 @@ const foods = [
 		img: 'https://i.ytimg.com/vi/08yYxeY8UdE/maxresdefault.jpg',
 	},
 ];
-
- const splitProducts = size => {
- 	let dividedProducts = [];
- 	for (let i = 0; i < foods.length; i += size) {
- 	  dividedProducts.push(foods.slice(i, i + size));
- 	}
- 	return dividedProducts;
-   };
-  
- //Funcion para dividir los productos en arrays de 6 y manejar la paginacion
-   const productsController = {
- 	dividedProducts: splitProducts(8),
- 	nextProductsIndex: 1,
- 	productsLimit: splitProducts(8).length,
-   };
