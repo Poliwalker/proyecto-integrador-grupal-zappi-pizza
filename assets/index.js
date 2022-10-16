@@ -23,12 +23,15 @@ const categoriesList = document.querySelectorAll('.category');
 //contenedor de las categorias
 const categories = document.querySelector('.card-category-container');
 //contenedor de las categorias mas populares
+
 const products = document.querySelector('.card-popular-container');
 // botón para agregar pedido al carrito
 const btnAdd = document.querySelector('.add');
 const titleContainer = document.querySelector('.section4-title');
 
 const overlay = document.querySelector('.overlay');
+
+// ---------------------------------------------
 
 //funcion para crear y retornar el html
 const createHtml = (product) => {
@@ -44,18 +47,23 @@ const createHtml = (product) => {
 	</div>`;
 };
 
-const renderProducts = (category = undefined, productList) => {
-	if (category === undefined) {
-		titleContainer.innerHTML = `No hay stock `;
+const renderProducts = (index = 0, category = undefined) => {
+	if (!category) {
+		renderDividedProduct(index);
 		return;
-	} else {
-		products.innerHTML = productList.map(createHtml).join('');
 	}
+	renderFilteredProducts(category);
 };
 
-const renderfilteredProducts = (category) => {
-	const productList = foods.filter((product) => product.category === category);
-	products.innerHTML = productList.map(createHtml).join('');
+const renderFilteredProducts = (category) => {
+	const productsList = foods.filter((product) => product.category === category);
+	products.innerHTML = productsList.map(createHtml).join('');
+};
+
+const renderDividedProduct = (index = 0) => {
+	products.innerHTML += productsController.dividedProducts[index]
+		.map(createHtml)
+		.join('');
 };
 
 const changeBtnActiveState = (selectedCategory) => {
@@ -67,6 +75,11 @@ const changeBtnActiveState = (selectedCategory) => {
 		}
 		categoryBtn.classList.add('active');
 	});
+	// if (foods.stock === undefined) {
+	// 	titleContainer.innerHTML = `no hay stock`;
+	// } else {
+	// 	titleContainer.innerHTML = categories(selectedCategory);
+	// }
 };
 
 const changeFilterState = (e) => {
@@ -84,20 +97,20 @@ const applyFilter = (e) => {
 		renderProducts(0, e.target.dataset.category);
 	}
 };
-
-const closeCart = () => {
-	cartContainer.classList.add('hidden');
-	overlay.classList.remove('show-overlay');
-};
+//----------------------------------------------
 
 const openCart = () => {
 	cartContainer.classList.remove('hidden');
 	overlay.classList.add('show-overlay');
 };
 
+const closeCart = () => {
+	cartContainer.classList.add('hidden');
+	overlay.classList.remove('show-overlay');
+};
+
 const closeOnScroll = () => {
 	if (cartContainer.classList.contains('hidden')) return;
-
 	cartContainer.classList.add('hidden');
 	overlay.classList.remove('show-overlay');
 };

@@ -182,9 +182,7 @@ const foods = [
 		precio: 350,
 		img: 'https://img-global.cpcdn.com/recipes/6bc24e2204fc621f/1200x630cq70/photo.jpg',
 	},
-	// wraps - Sin stock
-	// mexican food - Sin stock
-	//Batidos
+
 	{
 		id: 19,
 		nombre: 'fruti batido',
@@ -212,4 +210,38 @@ const foods = [
 		precio: 350,
 		img: 'https://i.ytimg.com/vi/08yYxeY8UdE/maxresdefault.jpg',
 	},
+	{
+		id: 22,
+		nombre: 'taco ness',
+		category: 'tacos',
+		leyenda: 'tacometro para el paladar',
+		popular: false,
+		precio: 1000,
+		img: 'https://i.ytimg.com/vi/08yYxeY8UdE/maxresdefault.jpg',
+		stock: '',
+	},
+	{
+		id: 23,
+		nombre: 'burritos',
+		category: 'burritos',
+		leyenda: 'burritos que te matan',
+		popular: false,
+		precio: 10000,
+		img: 'https://i.ytimg.com/vi/08yYxeY8UdE/maxresdefault.jpg',
+		stock: '',
+	},
 ];
+
+const splitProducts = (size) => {
+	let dividedProducts = [];
+	for (let i = 0; i < foods.length; i += size) {
+		dividedProducts.push(foods.slice(i, i + size));
+	}
+	return dividedProducts;
+};
+
+const productsController = {
+	dividedProducts: splitProducts(8),
+	nextProductsIndex: 1,
+	productsLimit: splitProducts(8).length,
+};
