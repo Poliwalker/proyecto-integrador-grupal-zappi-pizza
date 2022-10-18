@@ -192,3 +192,15 @@
 .show-overlay {
 	display: block;
 }
+
+.disabled {
+	color: white;
+	background: #b9b9b9;
+	cursor: not-allowed;
+	border: none;
+}
+.disabled:hover {
+	color: white;
+	cursor: not-allowed;
+	border: none;
+}

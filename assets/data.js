@@ -68,7 +68,7 @@ const foods = [
 		category: 'pizza',
 		leyenda: 'La que desaparece',
 		popular: false,
-		precio: 'gratarola',
+		precio: 0,
 		img: '/assets/fotos-que-faltan/PhotoMenunickgi.png',
 	},
 	{
