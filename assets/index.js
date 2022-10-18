@@ -35,8 +35,9 @@ const overlay = document.querySelector('.overlay');
 
 //funcion para crear y retornar el html
 const createHtml = (product) => {
-	const { nombre, leyenda, precio, img } = product;
-	return `<div class="card-popular">
+	const { nombre, leyenda, precio, img, category } = product;
+	return  `
+	<div class="card-popular">
 	<img src=${img} alt="fotito"/>
 	<h4>${nombre}</h4>
 	<p>${leyenda}</p>
@@ -75,11 +76,6 @@ const changeBtnActiveState = (selectedCategory) => {
 		}
 		categoryBtn.classList.add('active');
 	});
-	// if (foods.stock === undefined) {
-	// 	titleContainer.innerHTML = `no hay stock`;
-	// } else {
-	// 	titleContainer.innerHTML = categories(selectedCategory);
-	// }
 };
 
 const changeFilterState = (e) => {
@@ -88,14 +84,25 @@ const changeFilterState = (e) => {
 };
 
 const applyFilter = (e) => {
-	if (!e.target.classList.contains('category')) return;
+	if (!e.target.classList.contains('category'))
+	 ;
 	changeFilterState(e);
 	if (!e.target.dataset.category) {
-		products.innerHTML = '';
-		renderProducts();
+		products.innerHTML = renderError();
+	;
 	} else {
 		renderProducts(0, e.target.dataset.category);
 	}
+};
+
+const renderError = () => {
+    return `
+    <div class = "noProduct" >
+        <i class="icon_not_found fas fa-exclamation-triangle"></i>
+        <h2 class="text_not_found">Disculpe, no contamos con este producto momentaneamente</h2>
+    </div>
+   
+    `
 };
 //----------------------------------------------
 
