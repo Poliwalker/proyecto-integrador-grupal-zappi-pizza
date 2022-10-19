@@ -156,9 +156,9 @@ const renderCartProduct = (cartProduct) => {
 	  <span>$ ${precio}</span>
 	</div>
 	<div class="add-rest">
-	  <button class="rest-food-cart down data-id${id}">-</button>
+	  <button class="rest-food-cart down" data-id='${id}'>-</button>
 	  <span class="number-order">${quantity}</span>
-	  <button class="add-food-cart up data-id=${id}">+</button>
+	  <button class="add-food-cart up" data-id='${id}'>+</button>
 	</div>
   </div>
 `;
@@ -200,7 +200,7 @@ const isExistingCartProduct = (product) => {
 
 const addUnitProduct = (product) => {
 	cart = cart.map((cartProduct) => {
-		return cartProduct.id === product.id
+		return product.id === product.id
 			? { ...cartProduct, quantity: cartProduct.quantity + 1 }
 			: cartProduct;
 	});
@@ -231,7 +231,7 @@ const addProduct = (e) => {
 };
 
 const removeProduct = (existingProduct) => {
-	cart = cart.filter((product) => product.id !== existingProduct);
+	cart = cart.filter((product) => product.id !== existingProduct.id);
 	checkCartState();
 };
 
@@ -245,8 +245,10 @@ const restProductUnit = (existingProduct) => {
 
 const restProductCart = (id) => {
 	const existingCartProduct = cart.find((item) => item.id === id);
+
 	if (existingCartProduct.quantity === 1) {
-		if (window.confirm('¿Desea eliminar el producto del carrito?')) {
+		if (window.confirm('Desea eliminar el producto del carrito')) {
+			// borrar producto
 			removeProduct(existingCartProduct);
 		}
 		return;
@@ -268,6 +270,23 @@ const handleQuantity = (e) => {
 	checkCartState();
 };
 
+const resetCartItems = () => {
+	cart = [];
+	checkCartState();
+};
+
+const finishAction = (confirmmsg, succefullmsg) => {
+	if (!cart.length) return;
+	if (window.confirm(confirmmsg)) {
+		resetCartItems();
+		alert(succefullmsg);
+	}
+};
+
+const endBuy = () => {
+	finishAction('¿Desea finalizar su compra?', '¡Gracias por su compra actual!');
+};
+
 const init = () => {
 	renderProducts();
 	categories.addEventListener('click', applyFilter);
@@ -280,6 +299,7 @@ const init = () => {
 	disabled(btnComprar);
 	products.addEventListener('click', addProduct);
 	cartProducts.addEventListener('click', handleQuantity);
+	btnComprar.addEventListener('click', endBuy);
 };
 
 init();
