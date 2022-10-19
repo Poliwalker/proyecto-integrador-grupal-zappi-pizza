@@ -20,6 +20,8 @@ const subtotal = document.querySelector('.sub');
 //total de la compra
 const total = document.querySelector('.tot');
 
+const numberProducts = document.querySelector('.number-products');
+
 const titleCartBuy = document.querySelector('.title-cart-buy');
 
 //categorias
@@ -120,6 +122,7 @@ const renderError = () => {
 
     `;
 };
+
 //--------------------Toggle and Scroll--------------------------
 
 const openCart = () => {
@@ -200,7 +203,7 @@ const isExistingCartProduct = (product) => {
 
 const addUnitProduct = (product) => {
 	cart = cart.map((cartProduct) => {
-		return product.id === product.id
+		return cartProduct.id === product.id
 			? { ...cartProduct, quantity: cartProduct.quantity + 1 }
 			: cartProduct;
 	});
