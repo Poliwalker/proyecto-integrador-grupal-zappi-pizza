@@ -104,7 +104,7 @@ const changeFilterState = (e) => {
 };
 
 const titleCaterogy = (e) => {
-	selectedCategory = e.target.dataset.category;
+	selectedCategory = e.target.dataset.id;
 	const titleCategories = foods.filter((cat) => cat.category === category);
 	return titleCategories;
 };

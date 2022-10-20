@@ -112,7 +112,7 @@ body::-webkit-scrollbar-thumb {
 	align-items: center;
 	width: 100%;
 	margin-top: 20px;
-	padding: 90px;
+	padding: 0px 90px 30px 90px;
 }
 
 .hero-text {
@@ -239,7 +239,7 @@ body::-webkit-scrollbar-thumb {
 
 .card-recomendaciones img {
 	width: 100px;
-	margin:5px;
+	margin: 5px;
 }
 
 .description {
@@ -469,7 +469,6 @@ body::-webkit-scrollbar-thumb {
 	gap: 10px;
 	padding: 22px;
 }
-
 
 /* .active {
   border: 1px solid red;
