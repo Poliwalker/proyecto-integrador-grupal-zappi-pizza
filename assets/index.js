@@ -152,18 +152,18 @@ const closeOnOverlay = () => {
 const renderCartProduct = (cartProduct) => {
 	const { img, nombre, leyenda, precio, id, quantity } = cartProduct;
 	return `<div class="card-recomendaciones">
-	<img src="${img}" alt="pizza">
-	<div class="description">
-	  <p>${nombre}</p>
-	  <p class="p2">${leyenda}</p>
-	  <span>$ ${precio}</span>
-	</div>
-	<div class="add-rest">
-	  <button class="rest-food-cart down" data-id='${id}'>-</button>
-	  <span class="number-order">${quantity}</span>
-	  <button class="add-food-cart up" data-id='${id}'>+</button>
-	</div>
-  </div>
+	          <img src="${img}" alt="pizza">
+	          <div class="description">
+	              <p>${nombre}</p>
+	              <p class="p2">${leyenda}</p>
+	              <span>$ ${precio}</span>
+	          </div>
+	          <div class="add-rest">
+	              <button class="rest-food-cart down" data-id='${id}'>-</button>
+	              <span class="number-order">${quantity}</span>
+	              <button class="add-food-cart up" data-id='${id}'>+</button>
+	          </div>
+           </div>
 `;
 };
 
