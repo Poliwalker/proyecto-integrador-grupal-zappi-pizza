@@ -42,7 +42,7 @@ const foods = [
 		leyenda: 'Pica 2 veces',
 		popular: false,
 		precio: 750,
-		img: '/assets/populares/PhotoMenu-4.png',
+		img: '/assets/fotos-que-faltan/picantovich.jpg',
 	},
 	{
 		id: 6,
@@ -78,7 +78,7 @@ const foods = [
 		leyenda: 'Te volverás amarillo',
 		popular: false,
 		precio: 350,
-		img: 'https://d1ralsognjng37.cloudfront.net/201c40ce-65b7-4123-8ed9-c4196be8391e.jpeg',
+		img: '/assets/fotos-que-faltan/burger-krusty.jpg',
 	},
 	// burgers
 	{
@@ -88,7 +88,7 @@ const foods = [
 		leyenda: 'No comes por una semana',
 		popular: true,
 		precio: 350,
-		img: 'https://img.freepik.com/fotos-premium/hamburguesa-triple-ternera-nuggets-queso-huevo-lado-soleado-lateral-entorno-madera-oscura_341862-1232.jpg',
+		img: '/assets/fotos-que-faltan/burger-xxl.jpg',
 	},
 	{
 		id: 11,
@@ -97,7 +97,7 @@ const foods = [
 		leyenda: 'Estoy verde...',
 		popular: false,
 		precio: 350,
-		img: 'https://media-cdn.tripadvisor.com/media/photo-m/1280/1d/0e/d3/cd/green-earth-burger-green.jpg',
+		img: '/assets/fotos-que-faltan/green-day-burger.jpg',
 	},
 	{
 		id: 12,
@@ -106,7 +106,7 @@ const foods = [
 		leyenda: 'Miedo al probarla',
 		popular: false,
 		precio: 350,
-		img: 'https://thumbs.dreamstime.com/b/hamburguesa-negra-con-fondo-negro-carne-de-res-o-cerdo-filete-tomates-cedro-salsa-queso-lechuga-157330496.jpg',
+		img: '/assets/fotos-que-faltan/black-burger.jpg',
 	},
 	// papas fritas
 	{
@@ -116,7 +116,7 @@ const foods = [
 		leyenda: 'Te volará el estomago',
 		popular: false,
 		precio: 350,
-		img: 'https://www.cardamomo.news/__export/1621290930734/sites/debate/img/2021/05/17/papas_fritas_crop1621290739319.jpeg_1753094345.jpeg',
+		img: '/assets/fotos-que-faltan/tormenta-de-papa.jpg',
 	},
 	{
 		id: 14,
@@ -125,7 +125,7 @@ const foods = [
 		leyenda: '¡A que no la terminás! ',
 		popular: false,
 		precio: 350,
-		img: 'https://locosxlaparrilla.com/wp-content/uploads/2015/02/Receta-recetas-locos-x-la-parrilla-locosxlaparrilla-receta-papas-fritas-cheddar-verdeo-panceta-papas-fritas-cheddar-verde-640x477.jpg',
+		img: '/assets/fotos-que-faltan/baconator.jpg',
 	},
 	{
 		id: 15,
@@ -134,7 +134,7 @@ const foods = [
 		leyenda: '¡Arre Arre!',
 		popular: true,
 		precio: 350,
-		img: 'https://img.freepik.com/fotos-premium/huevos-fritos-patatas_70983-16.jpg',
+		img: '/assets/fotos-que-faltan/papas-a-caballo.jpg',
 	},
 	{
 		id: 16,
@@ -190,7 +190,7 @@ const foods = [
 		leyenda: 'refrescante rojo',
 		popular: true,
 		precio: 350,
-		img: 'https://www.losvinos.com.ar/wp-content/uploads/2020/06/Licuado-frutilla-leche.jpg',
+		img: '/assets/fotos-que-faltan/frutibatido.jpg',
 	},
 	{
 		id: 20,
@@ -199,7 +199,7 @@ const foods = [
 		leyenda: 'Dientes negros',
 		popular: false,
 		precio: 350,
-		img: 'https://static.diariovasco.com/www/multimedia/202005/23/media/cortadas/chocolate-RmBCWUivIA6p3VS678gd7eN-624x385@Diario%20Vasco.jpg',
+		img: '/assets/fotos-que-faltan/chocolatoso.jpg',
 	},
 	{
 		id: 21,
