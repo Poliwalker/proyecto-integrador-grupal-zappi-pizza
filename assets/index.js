@@ -99,13 +99,20 @@ const changeBtnActiveState = (selectedCategory) => {
 };
 
 const changeFilterState = (e) => {
-	const selectedCategory = e.target.dataset.category;
+	selectedCategory = e.target.dataset.category;
 	changeBtnActiveState(selectedCategory);
+};
+
+const titleCaterogy = (e) => {
+	selectedCategory = e.target.dataset.category;
+	const titleCategories = foods.filter((cat) => cat.category === category);
+	return titleCategories;
 };
 
 const applyFilter = (e) => {
 	if (!e.target.classList.contains('category'));
 	changeFilterState(e);
+	titleContainer.innerHTML = changeFilterState(e);
 	if (!e.target.dataset.category) {
 		products.innerHTML = renderError();
 	} else {
@@ -209,6 +216,12 @@ const addUnitProduct = (product) => {
 	});
 };
 
+const cantTotalLogoCart = () => {
+	let total = 0;
+	cart.forEach((producto) => (total = total + producto.quantity));
+	return total;
+};
+
 const createCardProduct = (product) => {
 	cart = [...cart, { ...product, quantity: 1 }];
 };
@@ -224,13 +237,13 @@ const addProduct = (e) => {
 	if (!e.target.classList.contains('add')) return;
 	const { id, nombre, precio, img, leyenda } = e.target.dataset;
 	const product = createProductData(id, nombre, precio, img, leyenda);
-	console.log(product);
 	if (isExistingCartProduct(product)) {
 		addUnitProduct(product);
 	} else {
 		createCardProduct(product);
 	}
 	checkCartState();
+	numberProducts.innerHTML = cantTotalLogoCart();
 };
 
 const removeProduct = (existingProduct) => {
@@ -251,7 +264,6 @@ const restProductCart = (id) => {
 
 	if (existingCartProduct.quantity === 1) {
 		if (window.confirm('Desea eliminar el producto del carrito')) {
-			// borrar producto
 			removeProduct(existingCartProduct);
 		}
 		return;
@@ -271,6 +283,7 @@ const handleQuantity = (e) => {
 		addProductCart(e.target.dataset.id);
 	}
 	checkCartState();
+	numberProducts.innerHTML = cantTotalLogoCart();
 };
 
 const resetCartItems = () => {
@@ -283,6 +296,7 @@ const finishAction = (confirmmsg, succefullmsg) => {
 	if (window.confirm(confirmmsg)) {
 		resetCartItems();
 		alert(succefullmsg);
+		numberProducts.textContent = cantTotalLogoCart();
 	}
 };
 
@@ -303,6 +317,7 @@ const init = () => {
 	products.addEventListener('click', addProduct);
 	cartProducts.addEventListener('click', handleQuantity);
 	btnComprar.addEventListener('click', endBuy);
+	numberProducts.innerHTML = cantTotalLogoCart();
 };
 
 init();
