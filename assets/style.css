@@ -239,6 +239,7 @@ body::-webkit-scrollbar-thumb {
 
 .card-recomendaciones img {
 	width: 100px;
+	margin:5px;
 }
 
 .description {
@@ -469,6 +470,7 @@ body::-webkit-scrollbar-thumb {
 	padding: 22px;
 }
 
+
 /* .active {
   border: 1px solid red;
 } */
@@ -492,6 +494,7 @@ body::-webkit-scrollbar-thumb {
 	width: 237px;
 	height: 97px;
 	border-radius: 16px;
+	background: cover;
 }
 
 .price-add {

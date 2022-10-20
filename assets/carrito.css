@@ -101,7 +101,7 @@
 
 .subtotal {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .subtotal h5,
@@ -116,7 +116,7 @@
 
 .send {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	padding: 10px 0 10px 0;
 	border-bottom: 1px solid white;
 }
@@ -124,7 +124,7 @@
 .total-products {
 	padding: 20px 0 30px 0;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .buy {
